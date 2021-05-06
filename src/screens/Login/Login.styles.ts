@@ -14,3 +14,10 @@ export const Logo = styled.Image`
   height: 200px;
   align-self: center;
 `;
+
+export const LogoLabel = styled.Text`
+  align-self: center;
+  font-weight: 700;
+  font-size: 25px;
+  color: ${({theme}) => theme.colors.brown};
+`;
