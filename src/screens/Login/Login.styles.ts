@@ -1,3 +1,4 @@
+import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
 export const Container = styled.ScrollView`
@@ -20,4 +21,8 @@ export const LogoLabel = styled.Text`
   font-weight: 700;
   font-size: 25px;
   color: ${({theme}) => theme.colors.brown};
+`;
+
+export const TouchableWithoutFeedbackStyled = styled(TouchableWithoutFeedback)`
+  height: 100%;
 `;
