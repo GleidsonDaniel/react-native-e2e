@@ -14,7 +14,12 @@ export default function Other() {
   const {goBack} = useNavigation();
   return (
     <Container>
-      <Button title="Voltar" color={theme.colors.cyan} onPress={goBack} />
+      <Button
+        title="Voltar"
+        color={theme.colors.cyan}
+        onPress={goBack}
+        testID="backButton"
+      />
     </Container>
   );
 }
