@@ -18,7 +18,7 @@ export default function Other() {
         title="Voltar"
         color={theme.colors.cyan}
         onPress={goBack}
-        testID="backButton"
+        testID="back_button"
       />
     </Container>
   );

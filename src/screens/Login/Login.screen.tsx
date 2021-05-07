@@ -78,6 +78,7 @@ export default function Login() {
             onPress={handleSubmit}
             color={theme.colors.cyan}
             disabled={!isValid}
+            testID="login_button"
           />
         </LoginContainer>
       </Container>
