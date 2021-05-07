@@ -3,6 +3,7 @@ import {useFormik} from 'formik';
 import React from 'react';
 import {Button, Keyboard} from 'react-native';
 import * as yup from 'yup';
+
 import monkey from '../../assets/monkey.png';
 import BaseInput from '../../components/BaseInput/BaseInput.component';
 import {theme} from '../../styles/theme';
@@ -64,7 +65,7 @@ export default function Login() {
             onSubmitEditing={Keyboard.dismiss}
           />
           <BaseInput
-            testID="senha"
+            testID="password"
             error={errors.password}
             placeholder="Digite sua senha"
             value={password}

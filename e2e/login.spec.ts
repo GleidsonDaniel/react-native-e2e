@@ -14,7 +14,7 @@ describe('Login Flow', () => {
 
   it('should have login screen components visible', async () => {
     await expect(element(by.id('baseInput_email'))).toBeVisible();
-    await expect(element(by.id('baseInput_senha'))).toBeVisible();
+    await expect(element(by.id('baseInput_password'))).toBeVisible();
     await expect(element(by.id('login_button'))).toBeVisible();
   });
 
@@ -33,25 +33,25 @@ describe('Login Flow', () => {
   });
 
   it('verify password input', async () => {
-    await expect(element(by.id('baseInput_senha'))).toBeVisible();
-    await element(by.id('baseInput_senha')).typeText('1234567');
-    await element(by.id('baseInput_senha')).tapReturnKey();
-    await expect(element(by.id('errorMessage_senha'))).toBeVisible();
-    await expect(element(by.id('errorMessage_senha'))).toHaveText(
+    await expect(element(by.id('baseInput_password'))).toBeVisible();
+    await element(by.id('baseInput_password')).typeText('1234567');
+    await element(by.id('baseInput_password')).tapReturnKey();
+    await expect(element(by.id('errorMessage_password'))).toBeVisible();
+    await expect(element(by.id('errorMessage_password'))).toHaveText(
       'A senha deve ter no minimo 8 caracteres',
     );
-    await element(by.id('baseInput_senha')).clearText();
-    await element(by.id('baseInput_senha')).typeText('12345678');
-    await element(by.id('baseInput_senha')).tapReturnKey();
-    await expect(element(by.id('errorMessage_senha'))).not.toBeVisible();
+    await element(by.id('baseInput_password')).clearText();
+    await element(by.id('baseInput_password')).typeText('12345678');
+    await element(by.id('baseInput_password')).tapReturnKey();
+    await expect(element(by.id('errorMessage_password'))).not.toBeVisible();
   });
 
   it('test login flow', async () => {
     await expect(element(by.id('baseInput_email'))).toBeVisible();
     await element(by.id('baseInput_email')).typeText('daniel@hotmail.com');
     await element(by.id('baseInput_email')).tapReturnKey();
-    await expect(element(by.id('baseInput_senha'))).toBeVisible();
-    await element(by.id('baseInput_senha')).typeText('12345678');
+    await expect(element(by.id('baseInput_password'))).toBeVisible();
+    await element(by.id('baseInput_password')).typeText('12345678');
     await element(by.id('baseInput_email')).tapReturnKey();
     await expect(element(by.id('login_button'))).toBeVisible();
     await element(by.id('login_button')).tap();
